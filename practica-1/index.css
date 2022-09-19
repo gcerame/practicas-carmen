@@ -1,19 +1,25 @@
 .img-ejemplo{
     width: 300px;
     height: auto;
-    flex-basis:25%;
 }
 
 .tarjeta {
     background: #b4b4b4;
     border-radius: 10px;
+    padding:10px;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 .contenido-tarjeta{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .texto-tarjeta{
-    flex-basis:75%;
+    flex-basis:50%;
 }
 body {
     font-family: 'Open Sans', sans-serif;
