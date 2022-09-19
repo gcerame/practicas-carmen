@@ -12,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.contenido-texto{
+.texto-tarjeta{
     flex-basis:75%;
 }
 body {
