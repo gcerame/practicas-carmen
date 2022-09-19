@@ -7,29 +7,41 @@
     -webkit-text-fill-color: bisque;
     -webkit-text-stroke: 1px black;
 }
-.img-ejemplo{
-    width: 300px;
-    height: auto;
-    flex-basis:25%;
-    border-radius: 5px;
-}
-
 .tarjeta {
     background: #b4b4b4;
     border-radius: 10px;
     text-align: justify;
+    padding: 10px;
+    margin: 10px;
 }
-.contenido-tarjeta{
+
+.contenido-tarjeta {
     display: flex;
+    align-items: baseline;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
 }
-.texto-tarjeta{
-    flex-basis:75%;
-    /*margin-left: 20px;*/
+
+.texto-tarjeta {
+    align-self: center;
+    flex-basis: 400px;
+    font-size: 18px;
+
 }
+.imagen-tarjeta {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    align-self: center;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
 
 h1 {
     font-weight: 800;
@@ -45,6 +57,6 @@ h2 {
 
 footer {
     margin: 10px;
-font-style: italic;
+    font-style: italic;
     text-align: center;
 }
