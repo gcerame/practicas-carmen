@@ -27,7 +27,7 @@
 
 .texto-tarjeta {
     font-size: 18px;
-    align-self: flex-start;
+    align-self: center;
     min-width: 200px;
     margin: 0;
     flex: 1;
