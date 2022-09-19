@@ -1,0 +1,22 @@
+.img-ejemplo{
+    width: 300px;
+    height: auto;
+}
+.tarjeta{
+    display:flex;
+    background: #b4b4b4;
+    border-radius:10px;
+}
+.tarjeta>h2{
+text-align: center;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+
+}
+h1{
+    font-weight: 800;
+}
+h2{
+    font-weight: 300;
+}
