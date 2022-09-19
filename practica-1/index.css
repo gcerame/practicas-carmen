@@ -1,22 +1,28 @@
 .img-ejemplo{
     width: 300px;
     height: auto;
+    flex-basis:25%;
 }
-.tarjeta{
-    display:flex;
-    background: #b4b4b4;
-    border-radius:10px;
-}
-.tarjeta>h2{
-text-align: center;
-}
-body{
-    font-family: 'Open Sans', sans-serif;
 
+.tarjeta {
+    background: #b4b4b4;
+    border-radius: 10px;
 }
-h1{
+.contenido-tarjeta{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenido-texto{
+    flex-basis:75%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
     font-weight: 800;
 }
-h2{
+
+h2 {
     font-weight: 300;
 }
