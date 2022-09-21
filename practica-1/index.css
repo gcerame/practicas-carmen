@@ -1,3 +1,13 @@
+.logotipo {
+    width: 200px;
+    float: left;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
 .titulo {
     border-radius: 5px;
     text-align: center;
