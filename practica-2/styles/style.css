@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'InterTight';
+url('../fonts/InterTight.ttf') format('truetype');
+}
+
+body {
+    font-family: 'InterTight', sans-serif;
+    margin: 1rem;
+}
+
+header {
+    display: flex;
+    padding: 5px;
+    gap: 7rem;
+    align-items: center;
+
+}
+
+.header--logo {
+    background: hsl(221, 70%, 78%);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header--logo > img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 10px;
+}
+
+.header--titulo {
+    display: flex;
+    background: hsl(120, 50%, 50%);
+
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.foto--clase-foto {
+    width: 500px;
+    min-width: 500px;
+}
+
+.informacion-clase {
+    flex-basis: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 0%, 0%);
+    border-radius: 10px;
+}
+

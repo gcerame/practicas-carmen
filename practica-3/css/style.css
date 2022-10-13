@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+    --fourth-bg-color: hsla(59, 61%, 66%,1);
+    --main-bg-color: hsla(83, 27%, 81%,1);
+    --second-bg-color: hsla(71, 14%, 31%,1);
+    --third-bg-color: hsla(64, 21%, 53%,1);
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    background: var(--main-bg-color);
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    align-items: center;
+    background: var(--second-bg-color);
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.login {
+    justify-self: flex-end;
+}
+
+.main-flex-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+aside {
+    background: var(--third-bg-color);
+    border-radius: 0.5em;
+    margin: 0.5rem 0;
+
+
+}
+
+aside > ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+
+}
+
+footer {
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+menu {
+    align-items: center;
+    background: var(--third-bg-color);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 2rem;
+    gap: 1rem;
+
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+main > article {
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+footer {
+    padding: 2rem;
+    border-radius: 0.5em;
+}
+
+.footer-item {
+    background: var(--fourth-bg-color);
+    filter: drop-shadow(1px 1px 5px black);
+    padding: 0.75rem;
+}
+
+article {
+    background: var(--third-bg-color);
+}
