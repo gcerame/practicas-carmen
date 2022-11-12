@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
 
-:root{
+:root {
 	--text-gradient: linear-gradient(182.02deg, #0C0F22 21.8%, #29346B 89.86%) no-repeat fixed;
 }
 
@@ -9,11 +9,26 @@
 }
 
 body {
-	background: var(--text-gradient);
+	background: linear-gradient(180deg, #000000, #737ff3);
 	color: white;
 	height: 100%;
 	margin: 0;
 	padding: 0 1rem;
+	background-size: 400% 400%;
+	animation: AnimationName 40s ease infinite alternate;
+}
+
+
+@keyframes AnimationName {
+	0% {
+		background-position: 0 0%
+	}
+	50% {
+		background-position: 10% 15%
+	}
+	100% {
+		background-position: 25% 20%
+	}
 }
 
 header {
@@ -21,24 +36,29 @@ header {
 
 a {
 	color: white;
+
 }
-a:hover{
+
+/*a:hover{
 	text-decoration-color: var(--text-gradient);
 	text-decoration-line: underline;
-}
-article{
+}*/
+
+article {
 	display: flex;
 }
-article > img{
+
+article > img {
 	padding: 20px;
-	border-radius: 2rem	;
+	border-radius: 2rem;
 	height: 75%;
 	width: 100%;
 }
+
 /* Grid */
 .grid-container {
 	display: grid;
-	grid-gap:20px;
+	grid-gap: 20px;
 	grid-template-areas:
     'header'
     'main'
@@ -46,14 +66,17 @@ article > img{
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
 }
-.grid-container>header{
+
+.grid-container > header {
 	grid-area: header;
 }
-.grid-container>main{
+
+.grid-container > main {
 	grid-area: main;
 
 }
-.grid-container>footer{
+
+.grid-container > footer {
 	grid-area: footer;
 }
 
@@ -93,10 +116,19 @@ header nav li {
 
 	background: linear-gradient(180deg, #737FF3 0%, rgba(70, 86, 227, 0.45) 100%);
 	-webkit-background-clip: text;
-	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
+	background-size: 200% auto;
 
+}
+
+a:hover {
+	animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
 }
 
 .menu--selected {
