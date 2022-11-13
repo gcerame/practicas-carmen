@@ -9,13 +9,13 @@
 }
 
 body {
-	background: linear-gradient(180deg, #000000, #737ff3);
+	animation: AnimationName 5s ease infinite alternate;
+	background: linear-gradient(180deg, #000000, #383838);
+	background-size: 400% 400%;
 	color: white;
 	height: 100%;
 	margin: 0;
 	padding: 0 1rem;
-	background-size: 400% 400%;
-	animation: AnimationName 40s ease infinite alternate;
 }
 
 
@@ -32,6 +32,8 @@ body {
 }
 
 header {
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -39,20 +41,16 @@ a {
 
 }
 
-/*a:hover{
-	text-decoration-color: var(--text-gradient);
-	text-decoration-line: underline;
-}*/
-
 article {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 article > img {
-	padding: 20px;
 	border-radius: 2rem;
-	height: 75%;
-	width: 100%;
+	padding: 20px;
+	width: 25%;
 }
 
 /* Grid */
@@ -81,12 +79,11 @@ article > img {
 }
 
 .header--titulo {
-	font-size: 5rem;
+	font-size: 4.5rem;
 	font-style: normal;
-	font-weight: 800;
+	font-weight: 700;
 	letter-spacing: -0.08em;
-	line-height: 104px;
-	margin: 0;
+	margin: -0.5rem;
 	padding: 0;
 
 }
@@ -107,22 +104,42 @@ header nav li {
 	font-size: 26px;
 	font-style: normal;
 	font-weight: 600;
-	letter-spacing: -0.07em;
+	letter-spacing: -0.10rem;
 	line-height: 32px;
 	padding: 0;
 }
 
 .menu--unselected {
 
-	background: linear-gradient(180deg, #737FF3 0%, rgba(70, 86, 227, 0.45) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-size: 200% auto;
+	color: white;
+	position: relative;
+	text-decoration: none;
 
 }
+/*
+Hover underline animado
+*/
 
-a:hover {
-	animation: shine 1s linear infinite;
+.menu--unselected:hover{
+	color:white;
+}
+
+.menu--unselected::before {
+	background-color: white;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: top left;
+	transition: transform 0.3s ease;
+	width: 100%;
+}
+
+.menu--unselected:hover::before {
+	transform: scaleX(1);
 }
 
 @keyframes shine {
@@ -152,7 +169,7 @@ footer {
 }
 
 article {
-	font-size: 20px;
+	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
 	letter-spacing: 0.03em;
