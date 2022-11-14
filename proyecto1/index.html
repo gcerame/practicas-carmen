@@ -12,13 +12,16 @@
 <div class="grid-container">
     <header>
         <h1 class="header--titulo">Guillermo Cerame</h1>
-        <nav>
+        <button class="hamburger-button" onclick="showHamburgerMenu()">
+            <img src="./img/icons/icons8-menu-squared-25.png" alt="">
+        </button>
+        <nav id="nav">
             <ul class="menu">
-                <li><a class="menu--selected" href="index.html">Home</a></li>
-                <li><a class="menu--unselected" href="unpoco.html">Un poco de mí</a></li>
-                <li><a class="menu--unselected" href="intereses.html">Mis intereses</a></li>
-                <li><a class="menu--unselected" href="micv.html">Mi CV</a></li>
-                <li><a class="menu--unselected" href="acerca.html">Acerca de la página</a></li>
+                <li><a class="menu-item menu--selected" href="index.html">Home</a></li>
+                <li><a class="menu-item menu--unselected" href="unpoco.html">Un poco de mí</a></li>
+                <li><a class="menu-item menu--unselected" href="intereses.html">Mis intereses</a></li>
+                <li><a class="menu-item menu--unselected" href="micv.html">Mi CV</a></li>
+                <li><a class="menu-item menu--unselected" href="acerca.html">Acerca de la página</a></li>
             </ul>
         </nav>
     </header>
@@ -55,4 +58,24 @@
     </footer>
 </div>
 </body>
+<script>
+    const menu = document.getElementsByClassName("menu")[0];
+    const toggleMenu = () => {
+        console.log(visualViewport.width)
+        if(visualViewport.width<768){
+            menu.classList.add("hidden");
+        }else {
+            menu.classList.remove("hidden");
+        }
+    }
+    window.onresize = toggleMenu;
+    window.onload= toggleMenu;
+
+   function showHamburgerMenu () {
+        menu.classList.toggle("hidden");
+       }
+
+</script>
 </html>
+
+

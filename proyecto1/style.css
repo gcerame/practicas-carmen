@@ -2,32 +2,39 @@
 
 :root {
 	--text-gradient: linear-gradient(182.02deg, #0C0F22 21.8%, #29346B 89.86%) no-repeat fixed;
+	--bg-gradient: linear-gradient(360deg, rgb(56, 55, 55) 1%, rgb(0, 0, 0) 100%) no-repeat fixed;
 }
 
 * {
 	font-family: 'Inter', sans-serif;
 }
 
+button {
+	border: none;
+	background: none;
+}
+
 body {
-	animation: AnimationName 5s ease infinite alternate;
-	background: linear-gradient(180deg, #000000, #383838);
-	background-size: 400% 400%;
-	color: white;
 	height: 100%;
-	margin: 0;
 	padding: 0 1rem;
+	margin: 0;
+	background: var(--bg-gradient);
+	color: white;
+	animation: backgroundAnimation 1s ease alternate;
 }
 
 
-@keyframes AnimationName {
+@keyframes backgroundAnimation {
 	0% {
-		background-position: 0 0%
+		display: flex;
+		flex-direction: column;
+		background-position: 10% 10%
 	}
 	50% {
 		background-position: 10% 15%
 	}
 	100% {
-		background-position: 25% 20%
+		background-position: 100% 100%
 	}
 }
 
@@ -35,6 +42,10 @@ header {
 	display: flex;
 	flex-direction: column;
 }
+.hamburger-button{
+	display: none;
+}
+
 
 a {
 	color: white;
@@ -48,9 +59,10 @@ article {
 }
 
 article > img {
-	border-radius: 2rem;
-	padding: 20px;
 	width: 25%;
+	padding: 20px;
+	border-radius: 2rem;
+	filter: drop-shadow(2px 2px 2px black);
 }
 
 /* Grid */
@@ -79,20 +91,23 @@ article > img {
 }
 
 .header--titulo {
+	padding: 0;
+	margin: 1rem 0;
 	font-size: 4.5rem;
 	font-style: normal;
 	font-weight: 700;
+	line-height: 3.4rem;
 	letter-spacing: -0.08em;
-	margin: -0.5rem;
-	padding: 0;
+
 
 }
 
 .menu {
 	display: flex;
-	gap: 1rem;
-	margin: 0;
 	padding: 0;
+	margin: 0;
+	gap: 1rem;
+	justify-items: center;
 }
 
 li {
@@ -101,41 +116,41 @@ li {
 }
 
 header nav li {
+	padding: 0;
 	font-size: 26px;
 	font-style: normal;
 	font-weight: 600;
 	letter-spacing: -0.10rem;
-	line-height: 32px;
-	padding: 0;
 }
 
 .menu--unselected {
 
-	color: white;
 	position: relative;
+	color: white;
 	text-decoration: none;
 
 }
+
 /*
 Hover underline animado
 */
 
-.menu--unselected:hover{
-	color:white;
+.menu--unselected:hover {
+	color: white;
 }
 
 .menu--unselected::before {
-	background-color: white;
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 2px;
-	left: 0;
 	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: white;
 	transform: scaleX(0);
 	transform-origin: top left;
 	transition: transform 0.3s ease;
-	width: 100%;
+	content: "";
 }
 
 .menu--unselected:hover::before {
@@ -153,26 +168,83 @@ Hover underline animado
 }
 
 .footer--socials {
-	align-items: center;
 	display: flex;
-	gap: 1rem;
 	justify-content: center;
-	margin: 0;
+	align-items: center;
 	padding: 0;
+	margin: 0;
+	gap: 1rem;
 }
 
 footer {
-	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 article {
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
-	letter-spacing: 0.03em;
 	line-height: 24px;
+	letter-spacing: 0.03em;
 }
+
+@media only screen and (max-width: 992px) {
+	article {
+		flex-wrap: wrap;
+
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	article {
+		font-size: 1rem;
+	}
+
+	article > img {
+		display: none;
+	}
+
+	header {
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+	}
+
+	.header--titulo {
+		font-size: 3rem;
+		display: inline-block;
+		flex-basis: 75%;
+	}
+
+	.hamburger-button {
+		display: inline-block;
+		align-self: center;
+	}
+
+	nav {
+		flex-basis: 100%;
+		background: var(--bg-gradient);
+	}
+
+	.menu {
+		flex-direction: column;
+		z-index: 1;
+		flex-basis: 100%;
+
+	}
+
+	.menu-item {
+		font-size: 1.2rem;
+		line-height: 0.1%
+	}
+}
+.hidden {
+	display: none;
+}
+
+
 
