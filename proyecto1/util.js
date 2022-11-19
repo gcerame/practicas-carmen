@@ -12,3 +12,11 @@ window.onload = toggleMenu;
 function showHamburgerMenu () {
     menu.classList.toggle("hidden");
 }
+const cursor = document.querySelector("body");
+
+cursor.addEventListener("mousemove", (e) => {
+    const { x, y } = cursor.getBoundingClientRect();
+    cursor.style.setProperty("--x", e.clientX - x);
+    cursor.style.setProperty("--y", e.clientY - y);
+
+});
