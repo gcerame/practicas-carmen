@@ -1,18 +1,21 @@
 const menu = document.getElementsByClassName("menu")[0];
 const toggleMenu = () => {
     if (visualViewport.width < 768) {
-        menu.classList.add("hidden");
+        menu.classList.toggle("hidden");
     } else {
-        menu.classList.remove("hidden");
+        menu.classList.toggle("hidden");
     }
 };
 const togglePreload = () => {
     const body = document.getElementsByTagName("body")[0];
     body.classList.toggle("preload");
 }
+const onLoad= () => {
+    togglePreload();
+    toggleMenu();
+}
 window.onresize = toggleMenu;
-window.onload = toggleMenu;
-window.onload = togglePreload;
+window.onload = onLoad;
 
 function showHamburgerMenu () {
     menu.classList.toggle("hidden");
