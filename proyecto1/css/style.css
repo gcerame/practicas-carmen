@@ -20,29 +20,14 @@ body {
 	margin: 0;
 	background: var(--bg-gradient);
 	color: white;
-	animation: backgroundAnimation 1s ease alternate;
-}
-
-
-@keyframes backgroundAnimation {
-	0% {
-		display: flex;
-		flex-direction: column;
-		background-position: 10% 10%
-	}
-	50% {
-		background-position: 10% 15%
-	}
-	100% {
-		background-position: 100% 100%
-	}
 }
 
 header {
 	display: flex;
 	flex-direction: column;
 }
-.hamburger-button{
+
+.hamburger-button {
 	display: none;
 }
 
@@ -56,18 +41,32 @@ article {
 	display: flex;
 	flex-wrap: wrap;
 }
-article > h3{
+
+.article--heading {
 	flex-basis: 100%;
 	font-size: 2rem;
 	margin: 0;
 	padding: 0;
 }
 
-.article--text{
+.article--text {
 	flex-basis: 70%;
 }
 
 article > img {
+	width: 25%;
+	padding: 20px;
+	border-radius: 2rem;
+	filter: drop-shadow(2px 2px 2px black);
+}
+
+.galeria {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.galeria > img {
 	width: 25%;
 	padding: 20px;
 	border-radius: 2rem;
@@ -212,7 +211,7 @@ article {
 		font-size: 1rem;
 	}
 
-	article > img {
+	article > img, .galeria > img {
 		display: none;
 	}
 
@@ -251,50 +250,35 @@ article {
 		line-height: 0.1%
 	}
 }
+
 .hidden {
 	display: none;
 }
 
-/* Cursor animation */
-.cursor {
-	width: 300px;
-	height: 300px;
-	margin: 30px 30px;
-	position: relative;
-	overflow: hidden;
-	background: white;
-}
-
-.cursor::after {
-	content: "";
-	position: absolute;
-	top: calc(var(--y, 0) * 1px - 50px);
-	left: calc(var(--x, 0) * 1px - 50px);
-	width: 100px;
-	height: 100px;
-	opacity: 0;
-	background: radial-gradient(#cef230, #ffffff00 80%);
-	transition: opacity 1s;
-}
-.cursor:hover::after {
-	opacity: 1;
-}
 
 /* Gradient heading animation*/
 
-.gradient-text{
-	background: linear-gradient(to right, crimson,pink,springgreen);
+.gradient-text {
+	background: linear-gradient(to right, crimson, #f87789);
 	background-size: 200% 200%;
-	animation: rainbow 2s ease-in-out infinite;
+	animation: rainbow 2s ease-in-out;
 	background-clip: text;
-	-webkit-background-clip:text;
+	-webkit-background-clip: text;
 	transition: color 4s ease-in-out;
 }
-.gradient-text:hover{
-	color:rgba(0,0,0,0);
+
+.gradient-text:hover {
+	color: rgba(0, 0, 0, 0);
 }
+
 @keyframes rainbow {
-	0%{background-position:left}
-	50%{background-position:right}
-	100%{background-position:left}
+	0% {
+		background-position: left
+	}
+	50% {
+		background-position: right
+	}
+	100% {
+		background-position: left
+	}
 }
