@@ -6,8 +6,13 @@ const toggleMenu = () => {
         menu.classList.remove("hidden");
     }
 };
+const togglePreload = () => {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.toggle("preload");
+}
 window.onresize = toggleMenu;
 window.onload = toggleMenu;
+window.onload = togglePreload;
 
 function showHamburgerMenu () {
     menu.classList.toggle("hidden");

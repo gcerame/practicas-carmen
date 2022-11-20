@@ -8,7 +8,7 @@
     <title>Guillermo Cerame - Mi CV</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="preload">
 <div class="grid-container">
     <header>
         <h1 class="header--titulo">Guillermo Cerame</h1>
@@ -30,9 +30,27 @@
         <section>
             <article class="article--acerca">
                 <h3 class="article--heading">Acerca de esta página</h3>
-                <h4>CSS Utilizado</h4>
+                <h4>Maquetación CSS</h4>
+                <p>Para conseguir una maquetación responsive con la menor cantidad de media queries y CSS he utilizado grid
+                y flexbox en para maquetar la página.</p>
                 <ul>
-                    <li>Grid para la estructura general de la página (header, body, footer)</li>
+                    <li>Grid para la estructura general de la página </li>
+                    <li>Flexbox para la maquetación de los elementos (header, footer, article...)</li>
+                </ul>
+                <h4>Elementos CSS3</h4>
+                <p>He utilizado distintas características de CSS3</p>
+                <ul>
+                    <li>Variables para colores y gradientes utilizados en mas de una ocasión</li>
+                    <li>Gradientes de color: en el fondo, y gradientes animados en el título y en el nav</li>
+                    <li>Animación de subrayado del nav: se muestra al hacer hover sobre los enlaces</li>
+                    <li>Animación de gradiente: cuando hacemos hover sobre el título y los elementos del nav</li>
+                    <li>Filtros: drop-shadow para las imágenes</li>
+                </ul>
+                <h4>Javascript</h4>
+                <p>Ha sido necesaria la utilización de javascript en estos casos:</p>
+                <ul>
+                    <li>Controlar si el menú hamburguesa se muestra o no, con un script que se dispara al cambiar el tamaño de la ventana</li>
+                    <li>Evitar que las animaciones se inicien antes de que la página termine de cargar para evitar problemas de visualización en Chrome</li>
                 </ul>
             </article>
         </section>
