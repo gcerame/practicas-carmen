@@ -45,6 +45,11 @@ article {
 	flex-wrap: wrap;
 	gap: 1.5rem;
 }
+section {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
 article > img {
 	width: 25%;
 	padding: 20px;
