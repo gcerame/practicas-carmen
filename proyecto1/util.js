@@ -1,9 +1,9 @@
 const menu = document.getElementsByClassName("menu")[0];
 const toggleMenu = () => {
     if (visualViewport.width < 768) {
-        menu.classList.toggle("hidden");
+        menu.classList.add("hidden");
     } else {
-        menu.classList.toggle("hidden");
+        menu.classList.remove("hidden");
     }
 };
 const togglePreload = () => {
