@@ -107,6 +107,7 @@ header nav li {
 	flex-direction: column;
 }
 .article--home, .article--portfolio {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
